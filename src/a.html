@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="format-detection" content="telephone=no" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <title>Config ESP</title>
+        <script>
+            function c(l) {
+                document.getElementById("s").value = l.innerText || l.textContent;
+                p = l.nextElementSibling.classList.contains("l");
+                document.getElementById("a").value = l.innerText || l.textContent;
+                p = l.nextElementSibling.classList.contains("l");
+                document.getElementById("p").disabled = !p;
+                if (p) document.getElementById("p").focus();
+            }
+        </script>
+        <style>
+            .c,
+            body {
+                text-align: center;
+                font-family: verdana;
+            }
+            div,
+            input {
+                padding: 5px;
+                font-size: 1em;
+                margin: 5px 0;
+                box-sizing: border-box;
+            }
+            button,
+            input[type="button"],
+            input[type="submit"] {
+                cursor: pointer;
+                border: 0;
+                background-color: #1fa3ec;
+                color: #fff;
+                line-height: 2.4rem;
+                font-size: 1.2rem;
+                width: 100%;
+            }
+            input[type="file"] {
+                border: 1px solid #1fa3ec;
+            }
+            .wrap {
+                text-align: left;
+                display: inline-block;
+                min-width: 260px;
+                max-width: 500px;
+            }
+
+         
+           
+           
+           
+            input:disabled {
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body class="{c}">
+        <div class="wrap">
+            <form method="POST" action="wifisave">
+                <label for="s">Mã máy</label><input id="s" name="s" autocorrect="off" autocapitalize="none" placeholder="" /><br />
+                <label for="a">Địa điểm</label><input id="a" name="a" autocorrect="off" autocapitalize="none" placeholder="" /><br />
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </body>
+</html>
