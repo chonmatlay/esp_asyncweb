@@ -84,6 +84,8 @@ void setup(){
             f.close();
             SPIFFS.end();
             server.end();
+            WiFi.mode(WIFI_STA);
+            WiFi.begin();
           }
         } else {
             message = "No message sent";
